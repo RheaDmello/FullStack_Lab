@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <title>DOM & Events</title>
+</head>
+<body>
+    <input id="name" placeholder="Enter your name">
+    <button id="btn">Submit</button>
+    <p id="msg"></p>
+    <script>
+document.addEventListener("DOMContentLoaded",()=>console.log("Page loaded!"));
+
+const nameInput=document.getElementById("name");
+const btn=document.getElementById("btn"); 
+const msg=document.getElementById("msg");
+
+btn.addEventListener("click",()=>{msg.textContent=nameInput.value?`Hello ${nameInput.value}`:"Enter a name!";})
+nameInput.addEventListener("keyup",()=>{msg.textContent=`Typing ${nameInput.value}`;});
+</script>
+
+</body>
+</html>
